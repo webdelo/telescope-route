@@ -4,6 +4,8 @@ namespace RainXC\TelescopeProduction;
 use Illuminate\Support\ServiceProvider;
 use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeAuth;
 use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeRoute;
+use RainXC\TelescopeProduction\Contracts\TelescopePathServiceContract;
+use RainXC\TelescopeProduction\Services\TelescopePathService;
 
 class TelescopePathServiceProvider extends ServiceProvider
 {
@@ -28,6 +30,6 @@ class TelescopePathServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->app->bind(TelescopePathServiceContract::class, TelescopePathService::class);
     }
 }

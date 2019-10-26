@@ -18,6 +18,11 @@ interface TelescopePathServiceContract
     /**
      * @return string
      */
+    public function getTelescopePath(): string;
+
+    /**
+     * @return string
+     */
     public function generate(): string;
 
     /**

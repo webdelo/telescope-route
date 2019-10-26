@@ -24,6 +24,19 @@ class TelescopePathService implements TelescopePathServiceContract
     /**
      * @return string
      */
+    public function getTelescopePath(): string
+    {
+        $path        = 'telescope';
+        $keyFilePath = storage_path('app/'.self::TELESCOPE_PATH_FILE);
+
+        return file_exists(storage_path('app/'.self::TELESCOPE_PATH_FILE))
+            ? $path.'/'.file_get_contents($keyFilePath)
+            : $path;
+    }
+
+    /**
+     * @return string
+     */
     public function generate(): string
     {
         $path = Str::random(45);
