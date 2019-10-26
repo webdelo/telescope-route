@@ -53,7 +53,6 @@ class TelescopeAuth extends Command
         try {
             $key = $service->generate();
             $this->call('config:cache');
-            $this->call('route:cache');
             $route = route('telescope');
 
             $this->info("Telescope auth key: {$key} ");
