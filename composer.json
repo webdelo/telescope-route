@@ -19,7 +19,9 @@
     },
     "extra": {
         "laravel": {
-            "providers": [],
+            "providers": [
+                "RainXC\\Telescope-Production\\TelescopePathServiceProvider"
+            ],
             "aliases": {}
         }
     }
