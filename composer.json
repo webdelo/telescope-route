@@ -1,0 +1,25 @@
+{
+    "name": "rainxc/telescope-production",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "Dmitri Cercel",
+            "email": "d.cercel@webdelo.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "laravel/framework": "^7.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "RainXC\\Telescope-Production\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    }
+}
