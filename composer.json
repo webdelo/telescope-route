@@ -2,6 +2,14 @@
     "name": "rainxc/telescope-production",
     "type": "library",
     "description": "Plugin helps to hide telescope from public on API backend.",
+    "keywords": [
+        "API",
+        "Telescope",
+        "Laravel",
+        "Sign-in",
+        "Login",
+        "Gate"
+    ],
     "authors": [
         {
             "name": "Dmitri Cercel",
