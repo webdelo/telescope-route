@@ -14,7 +14,7 @@ class TelescopePathServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/Helpers/telescope_helpers.php' => app_path('Helpers/telescope_helpers.php'),
+                __DIR__ . '/Helpers/telescope_helpers.php' => app_path('Helpers/telescope_helpers.php'),
             ], 'helpers');
 
             $this->commands([
