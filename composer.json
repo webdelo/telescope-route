@@ -30,7 +30,9 @@
             "providers": [
                 "RainXC\\TelescopeProduction\\TelescopePathServiceProvider"
             ],
-            "aliases": {}
+            "aliases": {
+                "TelescopePath": "RainXC\\TelescopeProduction\\Facades\\TelescopePath"
+            }
         }
     },
     "require": {
