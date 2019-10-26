@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace RainXC\TelescopeProduction;
 
 use App\Console\Commands\Telescope\TelescopeAuth;
 use App\Console\Commands\Telescope\TelescopeRoute;
