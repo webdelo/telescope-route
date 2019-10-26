@@ -3,7 +3,7 @@
 namespace RainXC\TelescopeProduction\Console\Commands\Telescope;
 
 use Illuminate\Console\Command;
-use src\Services\TelescopePathService;
+use RainXC\TelescopeProduction\Services\TelescopePathService;
 
 /**
  * Make authorization key for telescope view
