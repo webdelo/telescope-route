@@ -1,6 +1,7 @@
 {
     "name": "rainxc/telescope-production",
-    "type": "composer-plugin",
+    "type": "library",
+    "description": "Plugin helps to hide telescope from public on API backend.",
     "authors": [
         {
             "name": "Dmitri Cercel",
