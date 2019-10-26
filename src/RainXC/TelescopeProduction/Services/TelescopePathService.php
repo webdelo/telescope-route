@@ -10,7 +10,7 @@ namespace RainXC\TelescopeProduction\Services;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use src\Contracts\TelescopePathServiceContract;
+use RainXC\TelescopeProduction\Contracts\TelescopePathServiceContract;
 
 /**
  * Class TelescopePathService
