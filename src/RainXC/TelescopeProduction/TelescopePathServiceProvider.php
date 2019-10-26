@@ -1,9 +1,9 @@
 <?php
 namespace RainXC\TelescopeProduction;
 
-use App\Console\Commands\Telescope\TelescopeAuth;
-use App\Console\Commands\Telescope\TelescopeRoute;
 use Illuminate\Support\ServiceProvider;
+use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeAuth;
+use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeRoute;
 
 class TelescopePathServiceProvider extends ServiceProvider
 {

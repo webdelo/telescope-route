@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Telescope;
+namespace RainXC\TelescopeProduction\Console\Commands\Telescope;
 
 use Illuminate\Console\Command;
 use src\Services\TelescopePathService;
