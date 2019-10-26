@@ -6,7 +6,7 @@
  * Time: 09:11
  */
 
-namespace src\Services;
+namespace RainXC\TelescopeProduction\Services;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;

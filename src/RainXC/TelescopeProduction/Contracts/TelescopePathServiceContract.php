@@ -6,7 +6,7 @@
  * Time: 09:12
  */
 
-namespace src\Contracts;
+namespace RainXC\TelescopeProduction\Contracts;
 
 /**
  * Interface TelescopeKeyServiceContract

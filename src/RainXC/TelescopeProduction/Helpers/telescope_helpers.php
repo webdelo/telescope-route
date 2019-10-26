@@ -15,9 +15,9 @@ if (! function_exists('get_telescope_path')) {
     function get_telescope_path()
     {
         $path        = 'telescope';
-        $keyFilePath = storage_path('app/'.\src\Services\TelescopePathService::TELESCOPE_PATH_FILE);
+        $keyFilePath = storage_path('app/'.\RainXC\TelescopeProduction\Services\TelescopePathService::TELESCOPE_PATH_FILE);
 
-        return file_exists(storage_path('app/'.\src\Services\TelescopePathService::TELESCOPE_PATH_FILE))
+        return file_exists(storage_path('app/'.\RainXC\TelescopeProduction\Services\TelescopePathService::TELESCOPE_PATH_FILE))
             ? $path.'/'.file_get_contents($keyFilePath)
             : $path;
     }
