@@ -20,7 +20,6 @@
     ],
     "minimum-stability": "dev",
     "require-dev": {
-        "laravel/framework": "^6.0"
     },
     "autoload": {
         "psr-0": {
@@ -33,10 +32,11 @@
                 "Webdelo\\TelescopeRoute\\TelescopeRouteServiceProvider"
             ],
             "aliases": {
-                "TelescopePath": "Webdelo\\TelescopeRoute\\Facades\\TelescopeRoute"
+                "TelescopeRoute": "Webdelo\\TelescopeRoute\\Facades\\TelescopeRoute"
             }
         }
     },
     "require": {
+        "laravel/framework": "^7.0@dev"
     }
 }
