@@ -5,6 +5,7 @@
     "keywords": [
         "API",
         "Telescope",
+        "Route",
         "Laravel",
         "Sign-in",
         "Login",
@@ -22,16 +23,16 @@
     },
     "autoload": {
         "psr-0": {
-            "RainXC\\TelescopeProduction": "src/"
+            "Webdelo\\TelescopeProduction": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "RainXC\\TelescopeProduction\\TelescopePathServiceProvider"
+                "Webdelo\\TelescopeProduction\\TelescopePathServiceProvider"
             ],
             "aliases": {
-                "TelescopePath": "RainXC\\TelescopeProduction\\Facades\\TelescopePath"
+                "TelescopePath": "Webdelo\\TelescopeProduction\\Facades\\TelescopePath"
             }
         }
     },
