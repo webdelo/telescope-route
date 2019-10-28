@@ -11,7 +11,8 @@
         "Login",
         "Gate"
     ],
-    "authors": [
+  "license": ["MIT"],
+  "authors": [
         {
             "name": "Dmitri Cercel",
             "email": "d.cercel@webdelo.org"
