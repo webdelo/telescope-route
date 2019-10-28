@@ -20,6 +20,7 @@
     ],
     "minimum-stability": "dev",
     "require-dev": {
+      "laravel/framework": "^6.0@dev"
     },
     "autoload": {
         "psr-0": {
@@ -37,6 +38,6 @@
         }
     },
     "require": {
-        "laravel/framework": "^6.0@dev"
+
     }
 }
