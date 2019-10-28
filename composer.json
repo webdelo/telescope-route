@@ -24,16 +24,16 @@
     },
     "autoload": {
         "psr-0": {
-            "Webdelo\\TelescopeProduction": "src/"
+            "Webdelo\\TelescopeRoute": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webdelo\\TelescopeProduction\\TelescopeRouteServiceProvider"
+                "Webdelo\\TelescopeRoute\\TelescopeRouteServiceProvider"
             ],
             "aliases": {
-                "TelescopePath": "Webdelo\\TelescopeProduction\\Facades\\TelescopeRoute"
+                "TelescopePath": "Webdelo\\TelescopeRoute\\Facades\\TelescopeRoute"
             }
         }
     },
