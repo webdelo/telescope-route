@@ -27,8 +27,7 @@ class TelescopeRouteService implements TelescopeRouteServiceContract
      */
     public function route(): string
     {
-        $path        = 'telescope';
-
+        $path = 'telescope';
         return $this->isRouteExists()
             ? $path . '/' . $this->getPath()
             : $path;
