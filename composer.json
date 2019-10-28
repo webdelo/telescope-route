@@ -1,5 +1,5 @@
 {
-    "name": "rainxc/telescope-production",
+    "name": "webdelo/telescope-route",
     "type": "library",
     "description": "Plugin helps to hide telescope from public on API backend.",
     "keywords": [
