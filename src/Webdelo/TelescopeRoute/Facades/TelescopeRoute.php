@@ -12,6 +12,7 @@ class TelescopeRoute
 {
     /**
      * @return string
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public static function route()
     {

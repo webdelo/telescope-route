@@ -55,7 +55,7 @@ class TelescopeRoute extends Command
                 $route = route('telescope');
                 $this->info("Telescope auth route: {$route} ");
             } else {
-                Artisan::call(TelescopeRouteRefresh::class);
+                $this->call('telescope:route-refresh');
             }
         } catch (\Exception $e) {
             $this->error($e->getMessage());
