@@ -6,25 +6,26 @@
  * Time: 09:11
  */
 
-namespace RainXC\TelescopeProduction\Services;
+namespace Webdelo\TelescopeRoute\Services;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use RainXC\TelescopeProduction\Contracts\TelescopePathServiceContract;
+use League\Flysystem\FileNotFoundException;
+use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
 /**
  * Class TelescopePathService
  *
  * @package App\Services\Auth
  */
-class TelescopePathService implements TelescopePathServiceContract
+class TelescopeRouteService implements TelescopeRouteServiceContract
 {
     const TELESCOPE_PATH_FILE = 'telescope.path';
 
     /**
      * @return string
      */
-    public function getTelescopePath(): string
+    public function route(): string
     {
         $path        = 'telescope';
         $keyFilePath = storage_path('app/'.self::TELESCOPE_PATH_FILE);
@@ -53,5 +54,18 @@ class TelescopePathService implements TelescopePathServiceContract
     public function getPath(): string
     {
         return Storage::disk('local')->get(self::TELESCOPE_PATH_FILE);
+    }
+
+    /**
+     * @return bool
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     */
+    public function isRouteExists(): bool
+    {
+        try {
+            return file_exists($this->getPath());
+        } catch (FileNotFoundException $exception) {
+            return false;
+        }
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace RainXC\TelescopeProduction\Facades;
+namespace Webdelo\TelescopeRoute\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use RainXC\TelescopeProduction\Contracts\TelescopePathServiceContract;
+use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
-class TelescopePath extends Facade
+class TelescopeRoute extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -14,6 +14,6 @@ class TelescopePath extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return TelescopePathServiceContract::class;
+        return TelescopeRouteServiceContract::class;
     }
 }

@@ -6,19 +6,19 @@
  * Time: 09:12
  */
 
-namespace RainXC\TelescopeProduction\Contracts;
+namespace Webdelo\TelescopeRoute\Contracts;
 
 /**
  * Interface TelescopeKeyServiceContract
  *
  * @package App\Contracts\Services\Auth
  */
-interface TelescopePathServiceContract
+interface TelescopeRouteServiceContract
 {
     /**
      * @return string
      */
-    public function getTelescopePath(): string;
+    public function route(): string;
 
     /**
      * @return string
@@ -29,4 +29,9 @@ interface TelescopePathServiceContract
      * @return string
      */
     public function getPath(): string;
+
+    /**
+     * @return bool
+     */
+    public function isRouteExists(): bool;
 }

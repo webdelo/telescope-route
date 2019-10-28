@@ -1,8 +1,10 @@
 <?php
 
-namespace RainXC\TelescopeProduction\Console\Commands\Telescope;
+namespace Webdelo\TelescopeRoute\Console\Commands\Telescope;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
+use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
 /**
  * Make authorization key for telescope view
@@ -43,13 +45,18 @@ class TelescopeRoute extends Command
     }
 
     /**
+     * @param TelescopeRouteServiceContract $service
      * @return bool
      */
-    public function handle()
+    public function handle(TelescopeRouteServiceContract $service)
     {
         try {
-            $route = route('telescope');
-            $this->info("Telescope auth route: {$route} ");
+            if ($service->isRouteExists()) {
+                $route = route('telescope');
+                $this->info("Telescope auth route: {$route} ");
+            } else {
+                Artisan::call(TelescopeRouteRefresh::class);
+            }
         } catch (\Exception $e) {
             $this->error($e->getMessage());
             return false;

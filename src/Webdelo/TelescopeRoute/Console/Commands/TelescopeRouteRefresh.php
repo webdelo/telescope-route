@@ -1,9 +1,9 @@
 <?php
 
-namespace RainXC\TelescopeProduction\Console\Commands\Telescope;
+namespace Webdelo\TelescopeRoute\Console\Commands\Telescope;
 
 use Illuminate\Console\Command;
-use RainXC\TelescopeProduction\Services\TelescopePathService;
+use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
 /**
  * Make authorization key for telescope view
@@ -15,7 +15,7 @@ use RainXC\TelescopeProduction\Services\TelescopePathService;
  *
  * @package App\Console\Commands\Telescope
  */
-class TelescopeAuth extends Command
+class TelescopeRouteRefresh extends Command
 {
     /**
      * The name and signature of the console command.
@@ -23,7 +23,7 @@ class TelescopeAuth extends Command
      * @var string
      */
     protected $signature = "
-        telescope:auth
+        telescope:route-refresh
     ";
 
     /**
@@ -44,11 +44,11 @@ class TelescopeAuth extends Command
     }
 
     /**
-     * @param TelescopePathService $service
+     * @param TelescopeRouteServiceContract $service
      *
      * @return bool
      */
-    public function handle(TelescopePathService $service)
+    public function handle(TelescopeRouteServiceContract $service)
     {
         try {
             $key = $service->generate();

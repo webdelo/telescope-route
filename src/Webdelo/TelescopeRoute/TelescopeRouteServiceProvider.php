@@ -1,13 +1,13 @@
 <?php
-namespace RainXC\TelescopeProduction;
+namespace Webdelo\TelescopeRoute;
 
 use Illuminate\Support\ServiceProvider;
-use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeAuth;
-use RainXC\TelescopeProduction\Console\Commands\Telescope\TelescopeRoute;
-use RainXC\TelescopeProduction\Contracts\TelescopePathServiceContract;
-use RainXC\TelescopeProduction\Services\TelescopePathService;
+use Webdelo\TelescopeRoute\Console\Commands\Telescope\TelescopeRouteRefresh;
+use Webdelo\TelescopeRoute\Console\Commands\Telescope\TelescopeRoute;
+use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
+use Webdelo\TelescopeRoute\Services\TelescopeRouteService;
 
-class TelescopePathServiceProvider extends ServiceProvider
+class TelescopeRouteServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -20,7 +20,7 @@ class TelescopePathServiceProvider extends ServiceProvider
             ], 'helpers');
 
             $this->commands([
-                TelescopeAuth::class,
+                TelescopeRouteRefresh::class,
                 TelescopeRoute::class
             ]);
         }
@@ -30,6 +30,6 @@ class TelescopePathServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(TelescopePathServiceContract::class, TelescopePathService::class);
+        $this->app->bind(TelescopeRouteServiceContract::class, TelescopeRouteService::class);
     }
 }
