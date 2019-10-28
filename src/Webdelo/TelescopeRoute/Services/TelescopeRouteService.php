@@ -10,7 +10,6 @@ namespace Webdelo\TelescopeRoute\Services;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use League\Flysystem\FileNotFoundException;
 use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
 /**
@@ -28,10 +27,10 @@ class TelescopeRouteService implements TelescopeRouteServiceContract
     public function route(): string
     {
         $path        = 'telescope';
-        $keyFilePath = storage_path('app/'.self::TELESCOPE_PATH_FILE);
+        $keyFilePath = storage_path('app/' . self::TELESCOPE_PATH_FILE);
 
-        return file_exists(storage_path('app/'.self::TELESCOPE_PATH_FILE))
-            ? $path.'/'.file_get_contents($keyFilePath)
+        return file_exists(storage_path('app/' . self::TELESCOPE_PATH_FILE))
+            ? $path . '/' . file_get_contents($keyFilePath)
             : $path;
     }
 

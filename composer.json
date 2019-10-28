@@ -31,10 +31,7 @@
         "laravel": {
             "providers": [
                 "Webdelo\\TelescopeRoute\\TelescopeRouteServiceProvider"
-            ],
-            "aliases": {
-                "TelescopeRoute": "Webdelo\\TelescopeRoute\\Facades\\TelescopeRoute"
-            }
+            ]
         }
     },
     "require": {

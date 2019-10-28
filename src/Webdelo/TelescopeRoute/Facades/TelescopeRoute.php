@@ -2,18 +2,19 @@
 
 namespace Webdelo\TelescopeRoute\Facades;
 
-use Illuminate\Support\Facades\Facade;
-use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
+use Webdelo\TelescopeRoute\Services\TelescopeRouteService;
 
-class TelescopeRoute extends Facade
+/**
+ * Class TelescopeRoute
+ * @package Webdelo\TelescopeRoute\Facades
+ */
+class TelescopeRoute
 {
     /**
-     * Get the registered name of the component.
-     *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    public static function route()
     {
-        return TelescopeRouteServiceContract::class;
+        return (new TelescopeRouteService())->route();
     }
 }
