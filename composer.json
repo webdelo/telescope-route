@@ -1,5 +1,5 @@
 {
-    "name": "webdelo/telescope-route",
+    "name": "webdelo/laravel-telescope-route",
     "type": "library",
     "description": "Plugin helps to hide telescope from public on API backend.",
     "keywords": [
