@@ -14,7 +14,7 @@ use League\Flysystem\FileNotFoundException;
 use Webdelo\TelescopeRoute\Contracts\TelescopeRouteServiceContract;
 
 /**
- * Class TelescopePathService
+ * Class TelescopeRouteService
  *
  * @package App\Services\Auth
  */

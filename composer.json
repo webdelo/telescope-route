@@ -30,10 +30,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Webdelo\\TelescopeProduction\\TelescopePathServiceProvider"
+                "Webdelo\\TelescopeProduction\\TelescopeRouteServiceProvider"
             ],
             "aliases": {
-                "TelescopePath": "Webdelo\\TelescopeProduction\\Facades\\TelescopePath"
+                "TelescopePath": "Webdelo\\TelescopeProduction\\Facades\\TelescopeRoute"
             }
         }
     },
