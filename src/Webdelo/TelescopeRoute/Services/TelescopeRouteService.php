@@ -62,10 +62,6 @@ class TelescopeRouteService implements TelescopeRouteServiceContract
      */
     public function isRouteExists(): bool
     {
-        try {
-            return file_exists($this->getPath());
-        } catch (FileNotFoundException $exception) {
-            return false;
-        }
+        return Storage::disk('local')->exists(self::TELESCOPE_PATH_FILE);
     }
 }
