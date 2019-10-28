@@ -23,14 +23,14 @@ class TelescopeRouteService implements TelescopeRouteServiceContract
 
     /**
      * @return string
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function route(): string
     {
         $path        = 'telescope';
-        $keyFilePath = storage_path('app/' . self::TELESCOPE_PATH_FILE);
 
-        return file_exists(storage_path('app/' . self::TELESCOPE_PATH_FILE))
-            ? $path . '/' . file_get_contents($keyFilePath)
+        return $this->isRouteExists()
+            ? $path . '/' . $this->getPath()
             : $path;
     }
 
@@ -57,7 +57,6 @@ class TelescopeRouteService implements TelescopeRouteServiceContract
 
     /**
      * @return bool
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function isRouteExists(): bool
     {
