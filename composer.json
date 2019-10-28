@@ -37,6 +37,6 @@
         }
     },
     "require": {
-        "laravel/framework": "^7.0@dev"
+        "laravel/framework": "^6.0@dev"
     }
 }
